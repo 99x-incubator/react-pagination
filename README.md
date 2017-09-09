@@ -1,2 +1,2 @@
-# ngx-pagination-react
+# pagination-react
 Simple pagination component for React + apps. 
