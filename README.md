@@ -3,7 +3,7 @@
 [![npm package][npm-badge]][npm]
 [![Coveralls][coveralls-badge]][coveralls]
 [![license](https://img.shields.io/github/license/99xt/react-pagination.svg)](https://github.com/99xt/react-pagination/blob/master/LICENSE)
-[![Build Status](https://travis-ci.org/99xt/react-pagination.svg?branch=master)](https://travis-ci.org/99xt/react-pagination)
+[![Build Status](https://api.travis-ci.org/99xt/react-pagination.png?branch=master)](https://travis-ci.org/99xt/react-pagination)
 
 
 [npm-badge]: https://img.shields.io/npm/v/npm-package.png?style=flat-square
