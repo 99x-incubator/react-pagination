@@ -10,6 +10,8 @@ ul.pagination {
     display: inline-block;
     border: 1px solid #ccc;
     cursor: pointer;
+    float: left;
+    display: block;
   }
   
   ul.pagination li.empty {
@@ -19,9 +21,13 @@ ul.pagination {
   
   ul.pagination li.next {
     border: none;
+    float: left;
+    display: block;
   }
   
   ul.pagination li.prev {
+    float: left;
+    display: block;
     border: none;
   }
   
