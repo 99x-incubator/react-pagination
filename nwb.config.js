@@ -8,5 +8,11 @@ module.exports = {
         react: 'React'
       }
     }
+  },
+  webpack: {
+    compat: {
+      enzyme: true,
+      sinon: true
+    }
   }
 }
