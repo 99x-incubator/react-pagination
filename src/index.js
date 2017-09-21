@@ -119,6 +119,7 @@ export default class ReactPagination extends Component {
     this.setState(state);
   }
   selectPage(page) {
+    this.props.returnSelectedPage(page);
     let state = this.state;
     state.current = page;
     if (page === state.last) {
@@ -138,7 +139,10 @@ export default class ReactPagination extends Component {
   goNext() {
     this.selectPage(this.state.current + 1);
   }
-
+  onClick(event,n) {
+    this.selectPage(n);
+    func2();
+ }
   render() {
 
     let activeButtonColor= '#ccc'
