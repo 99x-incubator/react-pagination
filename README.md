@@ -14,6 +14,10 @@
 
 Simple pagination component for React JS apps.
 
+### Demo 
+
+[Demo URL](http://react-pagination-demo-99xt.surge.sh)
+
 
 ## Installation
 
@@ -27,12 +31,30 @@ npm install @99xt/pagination-react --save
 
 example.react.js
 
-```html
-<pagination
-  total="totalRecordCount"
-  limit="recordsPerPage"
->
-</pagination>
+```javascript
+
+  constructor(props) {
+    super(props);
+    this.state={
+      'selectedPage':1
+    }
+    this.getSelectedPage = this.getSelectedPage.bind(this)
+    
+  }
+  getSelectedPage(k) {
+    this.setState({
+      'selectedPage': k
+    })
+  }
+  render() {
+    return <div>
+      <h1>pagination-react Demo</h1>
+      <react-pagination total='totalRecordCount' limit='recordsPerPage' returnSelectedPage={this.getSelectedPage} />
+      <br />
+      <h2>{"Selected page : " + this.state.selectedPage}</h2>
+    </div>
+  }
+
 ```
 
 ## Contributing Guide
