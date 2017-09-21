@@ -3,7 +3,7 @@ import React from 'react'
 import { render, ReactDOM, unmountComponentAtNode } from 'react-dom'
 import { mount } from "enzyme";
 import Component from 'src/'
-
+import ReactButton from '../src/button'
 describe('Component', () => {
   let node
   let props;
@@ -48,4 +48,15 @@ describe('Component', () => {
     const wrappingDiv = divs.first();
     expect(wrappingDiv.children()).toEqual(ractPagination().children());
   });
+
+  it("always renders a `ReactButton`", () => {
+    expect(ractPagination().find(ReactButton).length).toBe(3);
+  });
+
+  it("it sends props it needs", () => {
+    const reactButton = ractPagination().find(ReactButton).first();
+    expect(Object.keys(reactButton.props()).length).toBe(4);
+  });
+
+
 });
