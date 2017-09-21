@@ -32,7 +32,6 @@ npm install @99xt/pagination-react --save
 example.react.js
 
 ```javascript
-
   constructor(props) {
     super(props);
     this.state={
@@ -49,12 +48,14 @@ example.react.js
   render() {
     return <div>
       <h1>pagination-react Demo</h1>
-      <react-pagination total='totalRecordCount' limit='recordsPerPage' returnSelectedPage={this.getSelectedPage} />
+      <react-pagination 
+        total='totalRecordCount'
+        limit='recordsPerPage'
+        returnSelectedPage={this.getSelectedPage} />
       <br />
       <h2>{"Selected page : " + this.state.selectedPage}</h2>
     </div>
   }
-
 ```
 
 ## Contributing Guide
