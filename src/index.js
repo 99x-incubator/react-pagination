@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import './style.css';
 
 
-export default class extends Component {
+export default class ReactPagination extends Component {
   limit = 20;
   total = 0;
   pageCount = 0;
@@ -128,8 +128,6 @@ export default class extends Component {
     }
     this.generatePagination();
     this.setState(state);
-
-    // this.onSelectPage.emit(page);
   }
   goPrev() {
     if (this.current > 0) {
@@ -147,7 +145,6 @@ export default class extends Component {
     let buttonColor='#fff';
 
     let first = this.state.pagination.first.map((n, i) => {
-      console.log('selected page', this.state.current);
       let btnStyle={backgroundColor:buttonColor};
       if (this.state.current === n) {
         btnStyle.backgroundColor = activeButtonColor
@@ -164,7 +161,6 @@ export default class extends Component {
       )
     })
     let second = this.state.pagination.second.map((n, i) => {
-      console.log('selected second page', this.state.current);
       
       let btnStyle={backgroundColor:buttonColor};
       if (this.state.current === n) {
@@ -182,7 +178,6 @@ export default class extends Component {
       )
     })
     let third = this.state.pagination.third.map((n, i) => {
-      console.log('selected third page', this.state.current);
       
       let btnStyle={backgroundColor:buttonColor};
       if (this.state.current === n) {
