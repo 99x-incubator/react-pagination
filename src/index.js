@@ -143,34 +143,57 @@ export default class extends Component {
 
   render() {
 
+    let activeButtonColor= '#ccc'
+    let buttonColor='#fff';
+
     let first = this.state.pagination.first.map((n, i) => {
       console.log('selected page', this.state.current);
+      let btnStyle={backgroundColor:buttonColor};
+      if (this.state.current === n) {
+        btnStyle.backgroundColor = activeButtonColor
+      }
 
       return (
         <li
           key={i}
           onClick={() => this.selectPage(n)}
+          style={btnStyle}
         >
           <a>{n}</a>
         </li >
       )
     })
     let second = this.state.pagination.second.map((n, i) => {
+      console.log('selected second page', this.state.current);
+      
+      let btnStyle={backgroundColor:buttonColor};
+      if (this.state.current === n) {
+        btnStyle.backgroundColor = activeButtonColor
+      }
+
       return (
         <li
           key={i}
           onClick={() => this.selectPage(n)}
+          style={btnStyle}
         >
           <a>{n}</a>
         </li >
       )
     })
     let third = this.state.pagination.third.map((n, i) => {
+      console.log('selected third page', this.state.current);
+      
+      let btnStyle={backgroundColor:buttonColor};
+      if (this.state.current === n) {
+        btnStyle.backgroundColor = activeButtonColor
+      }
+
       return (
         <li
           key={i}
-
           onClick={() => this.selectPage(n)}
+          style={btnStyle}
         >
           <a>{n}</a>
         </li >

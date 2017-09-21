@@ -7,7 +7,7 @@ class Demo extends Component {
   render() {
     return <div>
       <h1>pagination-react Demo</h1>
-      <Example total='50' limit='10'/>
+      <Example total='100' limit='10'/>
     </div>
   }
 }

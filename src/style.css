@@ -35,3 +35,7 @@ ul.pagination {
     background: #ccc;
   }
   
+  .pageBtn:active{
+    background: #000;
+    
+  }
