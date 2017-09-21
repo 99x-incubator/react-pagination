@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import './style.css';
-
+import ReactButton from './button';
 
 export default class ReactPagination extends Component {
   limit = 20;
@@ -20,6 +20,8 @@ export default class ReactPagination extends Component {
         third: []
       }
     };
+    this.selectPage = this.selectPage.bind(this);
+
   }
   componentDidMount() {
     this.limit = this.props.limit;
@@ -118,6 +120,7 @@ export default class ReactPagination extends Component {
     }
     this.setState(state);
   }
+
   selectPage(page) {
     this.props.returnSelectedPage(page);
     let state = this.state;
@@ -131,73 +134,25 @@ export default class ReactPagination extends Component {
     this.setState(state);
   }
   goPrev() {
-    if (this.current > 0) {
+    if (this.state.current > 0) {
       this.selectPage(this.state.current - 1);
     }
   }
 
   goNext() {
-    this.selectPage(this.state.current + 1);
+
+    if (this.pageCount > this.state.current) {
+      this.selectPage(this.state.current + 1);
+    }
   }
-  onClick(event,n) {
-    this.selectPage(n);
-    func2();
- }
+
   render() {
 
-    let activeButtonColor= '#ccc'
-    let buttonColor='#fff';
+    let activeButtonColor = '#ccc'
+    let buttonColor = '#fff';
 
-    let first = this.state.pagination.first.map((n, i) => {
-      let btnStyle={backgroundColor:buttonColor};
-      if (this.state.current === n) {
-        btnStyle.backgroundColor = activeButtonColor
-      }
 
-      return (
-        <li
-          key={i}
-          onClick={() => this.selectPage(n)}
-          style={btnStyle}
-        >
-          <a>{n}</a>
-        </li >
-      )
-    })
-    let second = this.state.pagination.second.map((n, i) => {
-      
-      let btnStyle={backgroundColor:buttonColor};
-      if (this.state.current === n) {
-        btnStyle.backgroundColor = activeButtonColor
-      }
 
-      return (
-        <li
-          key={i}
-          onClick={() => this.selectPage(n)}
-          style={btnStyle}
-        >
-          <a>{n}</a>
-        </li >
-      )
-    })
-    let third = this.state.pagination.third.map((n, i) => {
-      
-      let btnStyle={backgroundColor:buttonColor};
-      if (this.state.current === n) {
-        btnStyle.backgroundColor = activeButtonColor
-      }
-
-      return (
-        <li
-          key={i}
-          onClick={() => this.selectPage(n)}
-          style={btnStyle}
-        >
-          <a>{n}</a>
-        </li >
-      )
-    })
     return (
       <div>
         <div style={{ 'display': this.state.show ? 'block' : 'none' }}>
@@ -210,13 +165,17 @@ export default class ReactPagination extends Component {
 
                   <li
                     style={{ 'display': this.state.current > 1 ? 'block' : 'none' }}
-                    onClick={this.goPrev}
+                    onClick={this.goPrev.bind(this)}
                     className="prev"
                   >
                     <a>Prev</a>
                   </li>
 
-                  {first}
+                  <ReactButton
+                    selectPage={this.selectPage}
+                    section="first"
+                    current={this.state.current}
+                    pagination={this.state.pagination} />
 
                   <li
                     style={{ 'display': this.state.pagination.second.length > 0 ? 'block' : 'none' }}
@@ -225,7 +184,11 @@ export default class ReactPagination extends Component {
                     <a>...</a>
                   </li>
 
-                  {second}
+                  <ReactButton
+                    selectPage={this.selectPage}
+                    section="second"
+                    current={this.state.current}
+                    pagination={this.state.pagination} />
 
                   <li
                     style={{ 'display': this.state.pagination.third.length > 0 ? 'block' : 'none' }}
@@ -234,11 +197,15 @@ export default class ReactPagination extends Component {
                     <a>...</a>
                   </li>
 
-                  {third}
+                  <ReactButton
+                    selectPage={this.selectPage}
+                    section="third"
+                    current={this.state.current}
+                    pagination={this.state.pagination} />
 
                   <li
                     style={{ 'display': this.state.next != 0 ? 'block' : 'none' }}
-                    onClick={this.goNext}
+                    onClick={this.goNext.bind(this)}
                     className="next"
                   >
                     <span>Next</span>
