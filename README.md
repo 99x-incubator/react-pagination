@@ -1,3 +1,5 @@
+![logo](https://user-images.githubusercontent.com/7692626/30778463-2e0a6c64-a0f4-11e7-9f81-f44dd0538caf.png)
+
 # @99xt/pagination-react
 
 [![npm package][npm-badge]][npm]
