@@ -100,6 +100,10 @@ npm run build
 npm publish
 ```
 
+### Acknowledgement
+
+react-pagination is initially developed for the Hacktitude open source hackathon. Special thanks goes to project mentors [@thinkholic](https://github.com/thinkholic), [@lakindu95](https://github.com/lakindu95), [@PramithaSamarakoon](https://github.com/PramithaSamarakoon) and awesome [Dotitude](http://dotitude.com/) Family from [99xt](http://www.99xtechnology.com/).
+
 ## License
 
 MIT
