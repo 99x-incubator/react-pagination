@@ -3,16 +3,13 @@
 # @99xt/pagination-react
 
 [![npm package][npm-badge]][npm]
-[![Coveralls][coveralls-badge]][coveralls]
+[![Coveralls](https://coveralls.io/repos/github/99xt/react-pagination/badge.svg?branch=master)](https://coveralls.io/github/99xt/react-pagination?branch=master) 
 [![license](https://img.shields.io/github/license/99xt/react-pagination.svg)](https://github.com/99xt/react-pagination/blob/master/LICENSE)
 [![Build Status](https://api.travis-ci.org/99xt/react-pagination.png?branch=master)](https://travis-ci.org/99xt/react-pagination)
 
 
 [npm-badge]: https://img.shields.io/npm/v/npm-package.png?style=flat-square
 [npm]: https://www.npmjs.org/package/npm-package
-
-[coveralls-badge]: https://img.shields.io/coveralls/user/repo/master.png?style=flat-square
-[coveralls]: https://coveralls.io/github/user/repo
 
 Simple pagination component for React JS apps.
 
