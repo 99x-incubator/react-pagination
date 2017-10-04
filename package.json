@@ -30,10 +30,10 @@
     "react-dom": "^15.6.1",
     "react-test-renderer": "^15.6.1"
   },
-  "author": "",
-  "homepage": "",
+  "author": "99xt",
+  "homepage": "https://github.com/99xt/react-pagination",
   "license": "MIT",
-  "repository": "",
+  "repository": "https://github.com/99xt/react-pagination",
   "keywords": [
     "react-component"
   ]
