@@ -1,5 +1,5 @@
 {
-  "name": "pagination-react",
+  "name": "@99xt/react-pagination",
   "version": "1.0.0",
   "description": "pagination-react React component",
   "main": "lib/index.js",

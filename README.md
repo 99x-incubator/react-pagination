@@ -1,6 +1,6 @@
 ![logo](https://user-images.githubusercontent.com/7692626/30778463-2e0a6c64-a0f4-11e7-9f81-f44dd0538caf.png)
 
-# @99xt/pagination-react
+# @99xt/react-pagination
 
 [![npm package][npm-badge]][npm]
 [![Coveralls](https://coveralls.io/repos/github/99xt/react-pagination/badge.svg?branch=master)](https://coveralls.io/github/99xt/react-pagination?branch=master) 
@@ -23,7 +23,7 @@ Simple pagination component for React JS apps.
 To install this library, run:
 
 ```bash
-npm install @99xt/pagination-react --save
+npm install @99xt/react-pagination --save
 ```
 
 ## Usage
